@@ -1,0 +1,690 @@
+discount: 0.99
+values: reward
+states: TERM s1w0 s1w1 s1w0q0 s1w1q0 s0w0 s0w1 s0w0q0 s0w1q0
+actions: boot ask ask-rule_0
+observations: null term r w
+start: 0 0.8 0.2 0 0 0.0 0.0 0 0
+
+
+### Transitions
+T: boot : TERM : TERM 1
+T: boot : TERM : s1w0 0
+T: boot : TERM : s1w1 0
+T: boot : TERM : s1w0q0 0
+T: boot : TERM : s1w1q0 0
+T: boot : TERM : s0w0 0
+T: boot : TERM : s0w1 0
+T: boot : TERM : s0w0q0 0
+T: boot : TERM : s0w1q0 0
+
+T: ask : TERM : TERM 1
+T: ask : TERM : s1w0 0
+T: ask : TERM : s1w1 0
+T: ask : TERM : s1w0q0 0
+T: ask : TERM : s1w1q0 0
+T: ask : TERM : s0w0 0
+T: ask : TERM : s0w1 0
+T: ask : TERM : s0w0q0 0
+T: ask : TERM : s0w1q0 0
+
+T: ask-rule_0 : TERM : TERM 1
+T: ask-rule_0 : TERM : s1w0 0
+T: ask-rule_0 : TERM : s1w1 0
+T: ask-rule_0 : TERM : s1w0q0 0
+T: ask-rule_0 : TERM : s1w1q0 0
+T: ask-rule_0 : TERM : s0w0 0
+T: ask-rule_0 : TERM : s0w1 0
+T: ask-rule_0 : TERM : s0w0q0 0
+T: ask-rule_0 : TERM : s0w1q0 0
+
+T: boot : s1w0 : TERM 0
+T: boot : s1w0 : s1w0 0.8
+T: boot : s1w0 : s1w1 0.2
+T: boot : s1w0 : s1w0q0 0
+T: boot : s1w0 : s1w1q0 0
+T: boot : s1w0 : s0w0 0.0
+T: boot : s1w0 : s0w1 0.0
+T: boot : s1w0 : s0w0q0 0
+T: boot : s1w0 : s0w1q0 0
+
+T: ask : s1w0 : TERM 0.1
+T: ask : s1w0 : s1w0 0.855
+T: ask : s1w0 : s1w1 0
+T: ask : s1w0 : s1w0q0 0
+T: ask : s1w0 : s1w1q0 0
+T: ask : s1w0 : s0w0 0.045000000000000005
+T: ask : s1w0 : s0w1 0
+T: ask : s1w0 : s0w0q0 0
+T: ask : s1w0 : s0w1q0 0
+
+T: ask-rule_0 : s1w0 : TERM 0.1
+T: ask-rule_0 : s1w0 : s1w0 0
+T: ask-rule_0 : s1w0 : s1w1 0
+T: ask-rule_0 : s1w0 : s1w0q0 0.855
+T: ask-rule_0 : s1w0 : s1w1q0 0
+T: ask-rule_0 : s1w0 : s0w0 0
+T: ask-rule_0 : s1w0 : s0w1 0
+T: ask-rule_0 : s1w0 : s0w0q0 0.045000000000000005
+T: ask-rule_0 : s1w0 : s0w1q0 0
+
+T: boot : s1w1 : TERM 0
+T: boot : s1w1 : s1w0 0.8
+T: boot : s1w1 : s1w1 0.2
+T: boot : s1w1 : s1w0q0 0
+T: boot : s1w1 : s1w1q0 0
+T: boot : s1w1 : s0w0 0.0
+T: boot : s1w1 : s0w1 0.0
+T: boot : s1w1 : s0w0q0 0
+T: boot : s1w1 : s0w1q0 0
+
+T: ask : s1w1 : TERM 0.1
+T: ask : s1w1 : s1w0 0
+T: ask : s1w1 : s1w1 0.81
+T: ask : s1w1 : s1w0q0 0
+T: ask : s1w1 : s1w1q0 0
+T: ask : s1w1 : s0w0 0
+T: ask : s1w1 : s0w1 0.09000000000000001
+T: ask : s1w1 : s0w0q0 0
+T: ask : s1w1 : s0w1q0 0
+
+T: ask-rule_0 : s1w1 : TERM 0.1
+T: ask-rule_0 : s1w1 : s1w0 0
+T: ask-rule_0 : s1w1 : s1w1 0
+T: ask-rule_0 : s1w1 : s1w0q0 0
+T: ask-rule_0 : s1w1 : s1w1q0 0.81
+T: ask-rule_0 : s1w1 : s0w0 0
+T: ask-rule_0 : s1w1 : s0w1 0
+T: ask-rule_0 : s1w1 : s0w0q0 0
+T: ask-rule_0 : s1w1 : s0w1q0 0.09000000000000001
+
+T: boot : s1w0q0 : TERM 0
+T: boot : s1w0q0 : s1w0 0.8
+T: boot : s1w0q0 : s1w1 0.2
+T: boot : s1w0q0 : s1w0q0 0
+T: boot : s1w0q0 : s1w1q0 0
+T: boot : s1w0q0 : s0w0 0.0
+T: boot : s1w0q0 : s0w1 0.0
+T: boot : s1w0q0 : s0w0q0 0
+T: boot : s1w0q0 : s0w1q0 0
+
+T: ask : s1w0q0 : TERM 0.1
+T: ask : s1w0q0 : s1w0 0.855
+T: ask : s1w0q0 : s1w1 0
+T: ask : s1w0q0 : s1w0q0 0
+T: ask : s1w0q0 : s1w1q0 0
+T: ask : s1w0q0 : s0w0 0.045000000000000005
+T: ask : s1w0q0 : s0w1 0
+T: ask : s1w0q0 : s0w0q0 0
+T: ask : s1w0q0 : s0w1q0 0
+
+T: ask-rule_0 : s1w0q0 : TERM 0.1
+T: ask-rule_0 : s1w0q0 : s1w0 0
+T: ask-rule_0 : s1w0q0 : s1w1 0
+T: ask-rule_0 : s1w0q0 : s1w0q0 0.855
+T: ask-rule_0 : s1w0q0 : s1w1q0 0
+T: ask-rule_0 : s1w0q0 : s0w0 0
+T: ask-rule_0 : s1w0q0 : s0w1 0
+T: ask-rule_0 : s1w0q0 : s0w0q0 0.045000000000000005
+T: ask-rule_0 : s1w0q0 : s0w1q0 0
+
+T: boot : s1w1q0 : TERM 0
+T: boot : s1w1q0 : s1w0 0.8
+T: boot : s1w1q0 : s1w1 0.2
+T: boot : s1w1q0 : s1w0q0 0
+T: boot : s1w1q0 : s1w1q0 0
+T: boot : s1w1q0 : s0w0 0.0
+T: boot : s1w1q0 : s0w1 0.0
+T: boot : s1w1q0 : s0w0q0 0
+T: boot : s1w1q0 : s0w1q0 0
+
+T: ask : s1w1q0 : TERM 0.1
+T: ask : s1w1q0 : s1w0 0
+T: ask : s1w1q0 : s1w1 0.81
+T: ask : s1w1q0 : s1w0q0 0
+T: ask : s1w1q0 : s1w1q0 0
+T: ask : s1w1q0 : s0w0 0
+T: ask : s1w1q0 : s0w1 0.09000000000000001
+T: ask : s1w1q0 : s0w0q0 0
+T: ask : s1w1q0 : s0w1q0 0
+
+T: ask-rule_0 : s1w1q0 : TERM 0.1
+T: ask-rule_0 : s1w1q0 : s1w0 0
+T: ask-rule_0 : s1w1q0 : s1w1 0
+T: ask-rule_0 : s1w1q0 : s1w0q0 0
+T: ask-rule_0 : s1w1q0 : s1w1q0 0.81
+T: ask-rule_0 : s1w1q0 : s0w0 0
+T: ask-rule_0 : s1w1q0 : s0w1 0
+T: ask-rule_0 : s1w1q0 : s0w0q0 0
+T: ask-rule_0 : s1w1q0 : s0w1q0 0.09000000000000001
+
+T: boot : s0w0 : TERM 0
+T: boot : s0w0 : s1w0 0.8
+T: boot : s0w0 : s1w1 0.2
+T: boot : s0w0 : s1w0q0 0
+T: boot : s0w0 : s1w1q0 0
+T: boot : s0w0 : s0w0 0.0
+T: boot : s0w0 : s0w1 0.0
+T: boot : s0w0 : s0w0q0 0
+T: boot : s0w0 : s0w1q0 0
+
+T: ask : s0w0 : TERM 0.1
+T: ask : s0w0 : s1w0 0
+T: ask : s0w0 : s1w1 0
+T: ask : s0w0 : s1w0q0 0
+T: ask : s0w0 : s1w1q0 0
+T: ask : s0w0 : s0w0 0.9
+T: ask : s0w0 : s0w1 0
+T: ask : s0w0 : s0w0q0 0
+T: ask : s0w0 : s0w1q0 0
+
+T: ask-rule_0 : s0w0 : TERM 0.1
+T: ask-rule_0 : s0w0 : s1w0 0
+T: ask-rule_0 : s0w0 : s1w1 0
+T: ask-rule_0 : s0w0 : s1w0q0 0
+T: ask-rule_0 : s0w0 : s1w1q0 0
+T: ask-rule_0 : s0w0 : s0w0 0
+T: ask-rule_0 : s0w0 : s0w1 0
+T: ask-rule_0 : s0w0 : s0w0q0 0.9
+T: ask-rule_0 : s0w0 : s0w1q0 0
+
+T: boot : s0w1 : TERM 0
+T: boot : s0w1 : s1w0 0.8
+T: boot : s0w1 : s1w1 0.2
+T: boot : s0w1 : s1w0q0 0
+T: boot : s0w1 : s1w1q0 0
+T: boot : s0w1 : s0w0 0.0
+T: boot : s0w1 : s0w1 0.0
+T: boot : s0w1 : s0w0q0 0
+T: boot : s0w1 : s0w1q0 0
+
+T: ask : s0w1 : TERM 0.1
+T: ask : s0w1 : s1w0 0
+T: ask : s0w1 : s1w1 0
+T: ask : s0w1 : s1w0q0 0
+T: ask : s0w1 : s1w1q0 0
+T: ask : s0w1 : s0w0 0
+T: ask : s0w1 : s0w1 0.9
+T: ask : s0w1 : s0w0q0 0
+T: ask : s0w1 : s0w1q0 0
+
+T: ask-rule_0 : s0w1 : TERM 0.1
+T: ask-rule_0 : s0w1 : s1w0 0
+T: ask-rule_0 : s0w1 : s1w1 0
+T: ask-rule_0 : s0w1 : s1w0q0 0
+T: ask-rule_0 : s0w1 : s1w1q0 0
+T: ask-rule_0 : s0w1 : s0w0 0
+T: ask-rule_0 : s0w1 : s0w1 0
+T: ask-rule_0 : s0w1 : s0w0q0 0
+T: ask-rule_0 : s0w1 : s0w1q0 0.9
+
+T: boot : s0w0q0 : TERM 0
+T: boot : s0w0q0 : s1w0 0.8
+T: boot : s0w0q0 : s1w1 0.2
+T: boot : s0w0q0 : s1w0q0 0
+T: boot : s0w0q0 : s1w1q0 0
+T: boot : s0w0q0 : s0w0 0.0
+T: boot : s0w0q0 : s0w1 0.0
+T: boot : s0w0q0 : s0w0q0 0
+T: boot : s0w0q0 : s0w1q0 0
+
+T: ask : s0w0q0 : TERM 0.1
+T: ask : s0w0q0 : s1w0 0
+T: ask : s0w0q0 : s1w1 0
+T: ask : s0w0q0 : s1w0q0 0
+T: ask : s0w0q0 : s1w1q0 0
+T: ask : s0w0q0 : s0w0 0.9
+T: ask : s0w0q0 : s0w1 0
+T: ask : s0w0q0 : s0w0q0 0
+T: ask : s0w0q0 : s0w1q0 0
+
+T: ask-rule_0 : s0w0q0 : TERM 0.1
+T: ask-rule_0 : s0w0q0 : s1w0 0
+T: ask-rule_0 : s0w0q0 : s1w1 0
+T: ask-rule_0 : s0w0q0 : s1w0q0 0
+T: ask-rule_0 : s0w0q0 : s1w1q0 0
+T: ask-rule_0 : s0w0q0 : s0w0 0
+T: ask-rule_0 : s0w0q0 : s0w1 0
+T: ask-rule_0 : s0w0q0 : s0w0q0 0.9
+T: ask-rule_0 : s0w0q0 : s0w1q0 0
+
+T: boot : s0w1q0 : TERM 0
+T: boot : s0w1q0 : s1w0 0.8
+T: boot : s0w1q0 : s1w1 0.2
+T: boot : s0w1q0 : s1w0q0 0
+T: boot : s0w1q0 : s1w1q0 0
+T: boot : s0w1q0 : s0w0 0.0
+T: boot : s0w1q0 : s0w1 0.0
+T: boot : s0w1q0 : s0w0q0 0
+T: boot : s0w1q0 : s0w1q0 0
+
+T: ask : s0w1q0 : TERM 0.1
+T: ask : s0w1q0 : s1w0 0
+T: ask : s0w1q0 : s1w1 0
+T: ask : s0w1q0 : s1w0q0 0
+T: ask : s0w1q0 : s1w1q0 0
+T: ask : s0w1q0 : s0w0 0
+T: ask : s0w1q0 : s0w1 0.9
+T: ask : s0w1q0 : s0w0q0 0
+T: ask : s0w1q0 : s0w1q0 0
+
+T: ask-rule_0 : s0w1q0 : TERM 0.1
+T: ask-rule_0 : s0w1q0 : s1w0 0
+T: ask-rule_0 : s0w1q0 : s1w1 0
+T: ask-rule_0 : s0w1q0 : s1w0q0 0
+T: ask-rule_0 : s0w1q0 : s1w1q0 0
+T: ask-rule_0 : s0w1q0 : s0w0 0
+T: ask-rule_0 : s0w1q0 : s0w1 0
+T: ask-rule_0 : s0w1q0 : s0w0q0 0
+T: ask-rule_0 : s0w1q0 : s0w1q0 0.9
+
+
+
+### Observations
+O: boot : TERM : null 0
+O: boot : TERM : term 1
+O: boot : TERM : r 0
+O: boot : TERM : w 0
+
+O: ask : TERM : null 0
+O: ask : TERM : term 1
+O: ask : TERM : r 0
+O: ask : TERM : w 0
+
+O: ask-rule_0 : TERM : null 0
+O: ask-rule_0 : TERM : term 1
+O: ask-rule_0 : TERM : r 0
+O: ask-rule_0 : TERM : w 0
+
+O: boot : s1w0 : null 0
+O: boot : s1w0 : term 1
+O: boot : s1w0 : r 0
+O: boot : s1w0 : w 0
+
+O: ask : s1w0 : null 1
+O: ask : s1w0 : term 0
+O: ask : s1w0 : r 0
+O: ask : s1w0 : w 0
+
+O: ask-rule_0 : s1w0 : null 0
+O: ask-rule_0 : s1w0 : term 0
+O: ask-rule_0 : s1w0 : r 0.9
+O: ask-rule_0 : s1w0 : w 0.1
+
+O: boot : s1w1 : null 0
+O: boot : s1w1 : term 1
+O: boot : s1w1 : r 0
+O: boot : s1w1 : w 0
+
+O: ask : s1w1 : null 1
+O: ask : s1w1 : term 0
+O: ask : s1w1 : r 0
+O: ask : s1w1 : w 0
+
+O: ask-rule_0 : s1w1 : null 0
+O: ask-rule_0 : s1w1 : term 0
+O: ask-rule_0 : s1w1 : r 0.6
+O: ask-rule_0 : s1w1 : w 0.4
+
+O: boot : s1w0q0 : null 0
+O: boot : s1w0q0 : term 1
+O: boot : s1w0q0 : r 0
+O: boot : s1w0q0 : w 0
+
+O: ask : s1w0q0 : null 1
+O: ask : s1w0q0 : term 0
+O: ask : s1w0q0 : r 0
+O: ask : s1w0q0 : w 0
+
+O: ask-rule_0 : s1w0q0 : null 0
+O: ask-rule_0 : s1w0q0 : term 0
+O: ask-rule_0 : s1w0q0 : r 0.9
+O: ask-rule_0 : s1w0q0 : w 0.1
+
+O: boot : s1w1q0 : null 0
+O: boot : s1w1q0 : term 1
+O: boot : s1w1q0 : r 0
+O: boot : s1w1q0 : w 0
+
+O: ask : s1w1q0 : null 1
+O: ask : s1w1q0 : term 0
+O: ask : s1w1q0 : r 0
+O: ask : s1w1q0 : w 0
+
+O: ask-rule_0 : s1w1q0 : null 0
+O: ask-rule_0 : s1w1q0 : term 0
+O: ask-rule_0 : s1w1q0 : r 0.6
+O: ask-rule_0 : s1w1q0 : w 0.4
+
+O: boot : s0w0 : null 0
+O: boot : s0w0 : term 1
+O: boot : s0w0 : r 0
+O: boot : s0w0 : w 0
+
+O: ask : s0w0 : null 1
+O: ask : s0w0 : term 0
+O: ask : s0w0 : r 0
+O: ask : s0w0 : w 0
+
+O: ask-rule_0 : s0w0 : null 0
+O: ask-rule_0 : s0w0 : term 0
+O: ask-rule_0 : s0w0 : r 0.9
+O: ask-rule_0 : s0w0 : w 0.1
+
+O: boot : s0w1 : null 0
+O: boot : s0w1 : term 1
+O: boot : s0w1 : r 0
+O: boot : s0w1 : w 0
+
+O: ask : s0w1 : null 1
+O: ask : s0w1 : term 0
+O: ask : s0w1 : r 0
+O: ask : s0w1 : w 0
+
+O: ask-rule_0 : s0w1 : null 0
+O: ask-rule_0 : s0w1 : term 0
+O: ask-rule_0 : s0w1 : r 0.6
+O: ask-rule_0 : s0w1 : w 0.4
+
+O: boot : s0w0q0 : null 0
+O: boot : s0w0q0 : term 1
+O: boot : s0w0q0 : r 0
+O: boot : s0w0q0 : w 0
+
+O: ask : s0w0q0 : null 1
+O: ask : s0w0q0 : term 0
+O: ask : s0w0q0 : r 0
+O: ask : s0w0q0 : w 0
+
+O: ask-rule_0 : s0w0q0 : null 0
+O: ask-rule_0 : s0w0q0 : term 0
+O: ask-rule_0 : s0w0q0 : r 0.5
+O: ask-rule_0 : s0w0q0 : w 0.5
+
+O: boot : s0w1q0 : null 0
+O: boot : s0w1q0 : term 1
+O: boot : s0w1q0 : r 0
+O: boot : s0w1q0 : w 0
+
+O: ask : s0w1q0 : null 1
+O: ask : s0w1q0 : term 0
+O: ask : s0w1q0 : r 0
+O: ask : s0w1q0 : w 0
+
+O: ask-rule_0 : s0w1q0 : null 0
+O: ask-rule_0 : s0w1q0 : term 0
+O: ask-rule_0 : s0w1q0 : r 0.5
+O: ask-rule_0 : s0w1q0 : w 0.5
+
+
+
+### Rewards
+R: boot : TERM : TERM : * 0
+R: boot : TERM : s1w0 : * 0
+R: boot : TERM : s1w1 : * 0
+R: boot : TERM : s1w0q0 : * 0
+R: boot : TERM : s1w1q0 : * 0
+R: boot : TERM : s0w0 : * 0
+R: boot : TERM : s0w1 : * 0
+R: boot : TERM : s0w0q0 : * 0
+R: boot : TERM : s0w1q0 : * 0
+
+R: ask : TERM : TERM : * 0
+R: ask : TERM : s1w0 : * 0
+R: ask : TERM : s1w1 : * 0
+R: ask : TERM : s1w0q0 : * 0
+R: ask : TERM : s1w1q0 : * 0
+R: ask : TERM : s0w0 : * 0
+R: ask : TERM : s0w1 : * 0
+R: ask : TERM : s0w0q0 : * 0
+R: ask : TERM : s0w1q0 : * 0
+
+R: ask-rule_0 : TERM : TERM : * 0
+R: ask-rule_0 : TERM : s1w0 : * 0
+R: ask-rule_0 : TERM : s1w1 : * 0
+R: ask-rule_0 : TERM : s1w0q0 : * 0
+R: ask-rule_0 : TERM : s1w1q0 : * 0
+R: ask-rule_0 : TERM : s0w0 : * 0
+R: ask-rule_0 : TERM : s0w1 : * 0
+R: ask-rule_0 : TERM : s0w0q0 : * 0
+R: ask-rule_0 : TERM : s0w1q0 : * 0
+
+R: boot : s1w0 : TERM : * 0
+R: boot : s1w0 : s1w0 : * 0
+R: boot : s1w0 : s1w1 : * 0
+R: boot : s1w0 : s1w0q0 : * 0
+R: boot : s1w0 : s1w1q0 : * 0
+R: boot : s1w0 : s0w0 : * 0
+R: boot : s1w0 : s0w1 : * 0
+R: boot : s1w0 : s0w0q0 : * 0
+R: boot : s1w0 : s0w1q0 : * 0
+
+R: ask : s1w0 : TERM : * 0
+R: ask : s1w0 : s1w0 : * 0.499999
+R: ask : s1w0 : s1w1 : * -1.0000010000000004
+R: ask : s1w0 : s1w0q0 : * 0.499999
+R: ask : s1w0 : s1w1q0 : * -1.0000010000000004
+R: ask : s1w0 : s0w0 : * -1.5000010000000004
+R: ask : s1w0 : s0w1 : * -1.5000010000000004
+R: ask : s1w0 : s0w0q0 : * -1.5000010000000004
+R: ask : s1w0 : s0w1q0 : * -1.5000010000000004
+
+R: ask-rule_0 : s1w0 : TERM : * 0
+R: ask-rule_0 : s1w0 : s1w0 : * -1e-06
+R: ask-rule_0 : s1w0 : s1w1 : * -1e-06
+R: ask-rule_0 : s1w0 : s1w0q0 : * -1e-06
+R: ask-rule_0 : s1w0 : s1w1q0 : * -1e-06
+R: ask-rule_0 : s1w0 : s0w0 : * -1e-06
+R: ask-rule_0 : s1w0 : s0w1 : * -1e-06
+R: ask-rule_0 : s1w0 : s0w0q0 : * -1e-06
+R: ask-rule_0 : s1w0 : s0w1q0 : * -1e-06
+
+R: boot : s1w1 : TERM : * 0
+R: boot : s1w1 : s1w0 : * 0
+R: boot : s1w1 : s1w1 : * 0
+R: boot : s1w1 : s1w0q0 : * 0
+R: boot : s1w1 : s1w1q0 : * 0
+R: boot : s1w1 : s0w0 : * 0
+R: boot : s1w1 : s0w1 : * 0
+R: boot : s1w1 : s0w0q0 : * 0
+R: boot : s1w1 : s0w1q0 : * 0
+
+R: ask : s1w1 : TERM : * 0
+R: ask : s1w1 : s1w0 : * 0.499999
+R: ask : s1w1 : s1w1 : * -1.0000010000000004
+R: ask : s1w1 : s1w0q0 : * 0.499999
+R: ask : s1w1 : s1w1q0 : * -1.0000010000000004
+R: ask : s1w1 : s0w0 : * -1.5000010000000004
+R: ask : s1w1 : s0w1 : * -1.5000010000000004
+R: ask : s1w1 : s0w0q0 : * -1.5000010000000004
+R: ask : s1w1 : s0w1q0 : * -1.5000010000000004
+
+R: ask-rule_0 : s1w1 : TERM : * 0
+R: ask-rule_0 : s1w1 : s1w0 : * -1e-06
+R: ask-rule_0 : s1w1 : s1w1 : * -1e-06
+R: ask-rule_0 : s1w1 : s1w0q0 : * -1e-06
+R: ask-rule_0 : s1w1 : s1w1q0 : * -1e-06
+R: ask-rule_0 : s1w1 : s0w0 : * -1e-06
+R: ask-rule_0 : s1w1 : s0w1 : * -1e-06
+R: ask-rule_0 : s1w1 : s0w0q0 : * -1e-06
+R: ask-rule_0 : s1w1 : s0w1q0 : * -1e-06
+
+R: boot : s1w0q0 : TERM : * 0
+R: boot : s1w0q0 : s1w0 : * 0
+R: boot : s1w0q0 : s1w1 : * 0
+R: boot : s1w0q0 : s1w0q0 : * 0
+R: boot : s1w0q0 : s1w1q0 : * 0
+R: boot : s1w0q0 : s0w0 : * 0
+R: boot : s1w0q0 : s0w1 : * 0
+R: boot : s1w0q0 : s0w0q0 : * 0
+R: boot : s1w0q0 : s0w1q0 : * 0
+
+R: ask : s1w0q0 : TERM : * 0
+R: ask : s1w0q0 : s1w0 : * 0.499999
+R: ask : s1w0q0 : s1w1 : * -1.0000010000000004
+R: ask : s1w0q0 : s1w0q0 : * 0.499999
+R: ask : s1w0q0 : s1w1q0 : * -1.0000010000000004
+R: ask : s1w0q0 : s0w0 : * -1.5000010000000004
+R: ask : s1w0q0 : s0w1 : * -1.5000010000000004
+R: ask : s1w0q0 : s0w0q0 : * -1.5000010000000004
+R: ask : s1w0q0 : s0w1q0 : * -1.5000010000000004
+
+R: ask-rule_0 : s1w0q0 : TERM : * 0
+R: ask-rule_0 : s1w0q0 : s1w0 : * -1e-06
+R: ask-rule_0 : s1w0q0 : s1w1 : * -1e-06
+R: ask-rule_0 : s1w0q0 : s1w0q0 : * -1e-06
+R: ask-rule_0 : s1w0q0 : s1w1q0 : * -1e-06
+R: ask-rule_0 : s1w0q0 : s0w0 : * -1e-06
+R: ask-rule_0 : s1w0q0 : s0w1 : * -1e-06
+R: ask-rule_0 : s1w0q0 : s0w0q0 : * -1e-06
+R: ask-rule_0 : s1w0q0 : s0w1q0 : * -1e-06
+
+R: boot : s1w1q0 : TERM : * 0
+R: boot : s1w1q0 : s1w0 : * 0
+R: boot : s1w1q0 : s1w1 : * 0
+R: boot : s1w1q0 : s1w0q0 : * 0
+R: boot : s1w1q0 : s1w1q0 : * 0
+R: boot : s1w1q0 : s0w0 : * 0
+R: boot : s1w1q0 : s0w1 : * 0
+R: boot : s1w1q0 : s0w0q0 : * 0
+R: boot : s1w1q0 : s0w1q0 : * 0
+
+R: ask : s1w1q0 : TERM : * 0
+R: ask : s1w1q0 : s1w0 : * 0.499999
+R: ask : s1w1q0 : s1w1 : * -1.0000010000000004
+R: ask : s1w1q0 : s1w0q0 : * 0.499999
+R: ask : s1w1q0 : s1w1q0 : * -1.0000010000000004
+R: ask : s1w1q0 : s0w0 : * -1.5000010000000004
+R: ask : s1w1q0 : s0w1 : * -1.5000010000000004
+R: ask : s1w1q0 : s0w0q0 : * -1.5000010000000004
+R: ask : s1w1q0 : s0w1q0 : * -1.5000010000000004
+
+R: ask-rule_0 : s1w1q0 : TERM : * 0
+R: ask-rule_0 : s1w1q0 : s1w0 : * -1e-06
+R: ask-rule_0 : s1w1q0 : s1w1 : * -1e-06
+R: ask-rule_0 : s1w1q0 : s1w0q0 : * -1e-06
+R: ask-rule_0 : s1w1q0 : s1w1q0 : * -1e-06
+R: ask-rule_0 : s1w1q0 : s0w0 : * -1e-06
+R: ask-rule_0 : s1w1q0 : s0w1 : * -1e-06
+R: ask-rule_0 : s1w1q0 : s0w0q0 : * -1e-06
+R: ask-rule_0 : s1w1q0 : s0w1q0 : * -1e-06
+
+R: boot : s0w0 : TERM : * 0
+R: boot : s0w0 : s1w0 : * 0
+R: boot : s0w0 : s1w1 : * 0
+R: boot : s0w0 : s1w0q0 : * 0
+R: boot : s0w0 : s1w1q0 : * 0
+R: boot : s0w0 : s0w0 : * 0
+R: boot : s0w0 : s0w1 : * 0
+R: boot : s0w0 : s0w0q0 : * 0
+R: boot : s0w0 : s0w1q0 : * 0
+
+R: ask : s0w0 : TERM : * 0
+R: ask : s0w0 : s1w0 : * 0.499999
+R: ask : s0w0 : s1w1 : * -1.0000010000000004
+R: ask : s0w0 : s1w0q0 : * 0.499999
+R: ask : s0w0 : s1w1q0 : * -1.0000010000000004
+R: ask : s0w0 : s0w0 : * -1.5000010000000004
+R: ask : s0w0 : s0w1 : * -1.5000010000000004
+R: ask : s0w0 : s0w0q0 : * -1.5000010000000004
+R: ask : s0w0 : s0w1q0 : * -1.5000010000000004
+
+R: ask-rule_0 : s0w0 : TERM : * 0
+R: ask-rule_0 : s0w0 : s1w0 : * -1e-06
+R: ask-rule_0 : s0w0 : s1w1 : * -1e-06
+R: ask-rule_0 : s0w0 : s1w0q0 : * -1e-06
+R: ask-rule_0 : s0w0 : s1w1q0 : * -1e-06
+R: ask-rule_0 : s0w0 : s0w0 : * -1e-06
+R: ask-rule_0 : s0w0 : s0w1 : * -1e-06
+R: ask-rule_0 : s0w0 : s0w0q0 : * -1e-06
+R: ask-rule_0 : s0w0 : s0w1q0 : * -1e-06
+
+R: boot : s0w1 : TERM : * 0
+R: boot : s0w1 : s1w0 : * 0
+R: boot : s0w1 : s1w1 : * 0
+R: boot : s0w1 : s1w0q0 : * 0
+R: boot : s0w1 : s1w1q0 : * 0
+R: boot : s0w1 : s0w0 : * 0
+R: boot : s0w1 : s0w1 : * 0
+R: boot : s0w1 : s0w0q0 : * 0
+R: boot : s0w1 : s0w1q0 : * 0
+
+R: ask : s0w1 : TERM : * 0
+R: ask : s0w1 : s1w0 : * 0.499999
+R: ask : s0w1 : s1w1 : * -1.0000010000000004
+R: ask : s0w1 : s1w0q0 : * 0.499999
+R: ask : s0w1 : s1w1q0 : * -1.0000010000000004
+R: ask : s0w1 : s0w0 : * -1.5000010000000004
+R: ask : s0w1 : s0w1 : * -1.5000010000000004
+R: ask : s0w1 : s0w0q0 : * -1.5000010000000004
+R: ask : s0w1 : s0w1q0 : * -1.5000010000000004
+
+R: ask-rule_0 : s0w1 : TERM : * 0
+R: ask-rule_0 : s0w1 : s1w0 : * -1e-06
+R: ask-rule_0 : s0w1 : s1w1 : * -1e-06
+R: ask-rule_0 : s0w1 : s1w0q0 : * -1e-06
+R: ask-rule_0 : s0w1 : s1w1q0 : * -1e-06
+R: ask-rule_0 : s0w1 : s0w0 : * -1e-06
+R: ask-rule_0 : s0w1 : s0w1 : * -1e-06
+R: ask-rule_0 : s0w1 : s0w0q0 : * -1e-06
+R: ask-rule_0 : s0w1 : s0w1q0 : * -1e-06
+
+R: boot : s0w0q0 : TERM : * 0
+R: boot : s0w0q0 : s1w0 : * 0
+R: boot : s0w0q0 : s1w1 : * 0
+R: boot : s0w0q0 : s1w0q0 : * 0
+R: boot : s0w0q0 : s1w1q0 : * 0
+R: boot : s0w0q0 : s0w0 : * 0
+R: boot : s0w0q0 : s0w1 : * 0
+R: boot : s0w0q0 : s0w0q0 : * 0
+R: boot : s0w0q0 : s0w1q0 : * 0
+
+R: ask : s0w0q0 : TERM : * 0
+R: ask : s0w0q0 : s1w0 : * 0.499999
+R: ask : s0w0q0 : s1w1 : * -1.0000010000000004
+R: ask : s0w0q0 : s1w0q0 : * 0.499999
+R: ask : s0w0q0 : s1w1q0 : * -1.0000010000000004
+R: ask : s0w0q0 : s0w0 : * -1.5000010000000004
+R: ask : s0w0q0 : s0w1 : * -1.5000010000000004
+R: ask : s0w0q0 : s0w0q0 : * -1.5000010000000004
+R: ask : s0w0q0 : s0w1q0 : * -1.5000010000000004
+
+R: ask-rule_0 : s0w0q0 : TERM : * 0
+R: ask-rule_0 : s0w0q0 : s1w0 : * -1e-06
+R: ask-rule_0 : s0w0q0 : s1w1 : * -1e-06
+R: ask-rule_0 : s0w0q0 : s1w0q0 : * -1e-06
+R: ask-rule_0 : s0w0q0 : s1w1q0 : * -1e-06
+R: ask-rule_0 : s0w0q0 : s0w0 : * -1e-06
+R: ask-rule_0 : s0w0q0 : s0w1 : * -1e-06
+R: ask-rule_0 : s0w0q0 : s0w0q0 : * -1e-06
+R: ask-rule_0 : s0w0q0 : s0w1q0 : * -1e-06
+
+R: boot : s0w1q0 : TERM : * 0
+R: boot : s0w1q0 : s1w0 : * 0
+R: boot : s0w1q0 : s1w1 : * 0
+R: boot : s0w1q0 : s1w0q0 : * 0
+R: boot : s0w1q0 : s1w1q0 : * 0
+R: boot : s0w1q0 : s0w0 : * 0
+R: boot : s0w1q0 : s0w1 : * 0
+R: boot : s0w1q0 : s0w0q0 : * 0
+R: boot : s0w1q0 : s0w1q0 : * 0
+
+R: ask : s0w1q0 : TERM : * 0
+R: ask : s0w1q0 : s1w0 : * 0.499999
+R: ask : s0w1q0 : s1w1 : * -1.0000010000000004
+R: ask : s0w1q0 : s1w0q0 : * 0.499999
+R: ask : s0w1q0 : s1w1q0 : * -1.0000010000000004
+R: ask : s0w1q0 : s0w0 : * -1.5000010000000004
+R: ask : s0w1q0 : s0w1 : * -1.5000010000000004
+R: ask : s0w1q0 : s0w0q0 : * -1.5000010000000004
+R: ask : s0w1q0 : s0w1q0 : * -1.5000010000000004
+
+R: ask-rule_0 : s0w1q0 : TERM : * 0
+R: ask-rule_0 : s0w1q0 : s1w0 : * -1e-06
+R: ask-rule_0 : s0w1q0 : s1w1 : * -1e-06
+R: ask-rule_0 : s0w1q0 : s1w0q0 : * -1e-06
+R: ask-rule_0 : s0w1q0 : s1w1q0 : * -1e-06
+R: ask-rule_0 : s0w1q0 : s0w0 : * -1e-06
+R: ask-rule_0 : s0w1q0 : s0w1 : * -1e-06
+R: ask-rule_0 : s0w1q0 : s0w0q0 : * -1e-06
+R: ask-rule_0 : s0w1q0 : s0w1q0 : * -1e-06
+

@@ -1,0 +1,100 @@
+# This file is a POMDP policy, represented as a set of "lower bound
+# planes", each of which consists of an alpha vector and a corresponding
+# action.  Given a particular belief b, this information can be used to
+# answer two queries of interest:
+#
+#   1. What is a lower bound on the expected long-term reward starting
+#        from belief b?
+#   2. What is an action that achieves that expected reward lower bound?
+#
+# Each lower bound plane is only defined over a subset of the belief
+# simplex--it is defined for those beliefs b such that the non-zero
+# entries of b are a subset of the entries present in the plane's alpha
+# vector.  If this condition holds we say the plane is 'applicable' to b.
+#
+# Given a belief b, both of the queries above can be answered by the
+# following process: first, throw out all the planes that are not
+# applicable to b.  Then, for each of the remaining planes, take the inner
+# product of the plane's alpha vector with b.  The highest inner product
+# value is the expected long-term reward lower bound, and the action label
+# for that plane is the action that achieves the bound.
+
+{
+  policyType => "MaxPlanesLowerBound",
+  numPlanes => 7,
+  planes => [
+    {
+      action => 0,
+      numEntries => 9,
+      entries => [
+        0, 0,
+        1, 0,
+        2, 0,
+        3, 0,
+        4, 0,
+        5, 0,
+        6, 0,
+        7, 0,
+        8, 0
+      ]
+    },
+    {
+      action => 1,
+      numEntries => 4,
+      entries => [
+        1, 1.10062,
+        2, -0.204384,
+        5, -0.609384,
+        6, -0.609384
+      ]
+    },
+    {
+      action => 1,
+      numEntries => 4,
+      entries => [
+        3, 1.26447,
+        4, -1.16319,
+        7, -1.89296,
+        8, -1.89296
+      ]
+    },
+    {
+      action => 0,
+      numEntries => 4,
+      entries => [
+        3, 0.83122,
+        4, 0.83122,
+        7, 0.83122,
+        8, 0.83122
+      ]
+    },
+    {
+      action => 1,
+      numEntries => 4,
+      entries => [
+        3, 1.10062,
+        4, -0.204384,
+        7, -0.609384,
+        8, -0.609384
+      ]
+    },
+    {
+      action => 0,
+      numEntries => 4,
+      entries => [
+        1, 0.83122,
+        2, 0.83122,
+        5, 0.83122,
+        6, 0.83122
+      ]
+    },
+    {
+      action => 1,
+      numEntries => 2,
+      entries => [
+        1, 1.10062,
+        2, -0.204384
+      ]
+    }
+  ]
+}
