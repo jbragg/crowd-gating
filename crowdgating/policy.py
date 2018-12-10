@@ -143,7 +143,6 @@ class Policy:
                 model.get_params_est())
             self.hparams_estimated[worker] = copy.deepcopy(model.hparams)
         if resolve_p:
-            print('hi')
             utime1, stime1, cutime1, cstime1, _ = os.times()
             self.external_policy = self.run_solver(
                 model_filepath=model_filepath, policy_filepath=policy_filepath)
