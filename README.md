@@ -52,15 +52,13 @@ JSON for command line:
 ```
 
 Python:
-``python`
+```python
 {
     'tutorial': [True, True],
     'screening': [True, True, False],
     'work': [None, None, True, None, False]
 }
 ```
-
-
 
 
 
