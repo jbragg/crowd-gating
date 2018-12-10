@@ -64,7 +64,7 @@ def get_args(args):
 
 @app.route('/', methods=['GET', 'POST'])
 def question():
-    if request.args:
+    if request.args or not session.get('args'):
         session['args'] = get_args(request.args)
         reset(**request.args)
     args = session.get('args')

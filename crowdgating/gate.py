@@ -23,7 +23,7 @@ class Gate:
         self.gold_per_batch = gold_per_batch
         self.exponential_backoff = exponential_backoff
         self.seed = seed
-        self.test_policy = test_policy,
+        self.test_policy = test_policy
 
     def next(self, history, seed=None):
         tutorial = history.get('tutorial') or []
@@ -44,9 +44,10 @@ class Gate:
         )
         if (
                 not self.test_policy
-                or 'tutorial' in gating_recommendation
-                or 'screening' in gating_recommendation
-                or not gating._passes_screening(
+                or gating_recommendation and (
+                    'tutorial' in gating_recommendation
+                    or 'screening' in gating_recommendation
+                ) or not gating._passes_screening(
                     screening=screening,
                     accuracy=self.desired_accuracy,
                 )
