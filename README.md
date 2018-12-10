@@ -45,9 +45,9 @@ Here is an illustrative example, where a worker
 JSON for command line:
 ```json
 {
-    'tutorial': [true, true],
-    'screening': [true, true, false],
-    'work': [null, null, true, null, false]
+    "tutorial": [true, true],
+    "screening": [true, true, false],
+    "work": [null, null, true, null, false]
 }
 ```
 
