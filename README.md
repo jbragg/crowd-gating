@@ -15,6 +15,14 @@ NAACL 2016.
 Jonathan Bragg, Mausam, Daniel S. Weld.
 AAMAS 2016.
 
+## Installation
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
 ## Parameter definitions
 - `n_tutorial` (int): Number of tutorial questions. Defaults to `0` except in web app.
 - `n_screening` (int): Number of screening questions. Defaults to `0` except in web app.
@@ -24,6 +32,38 @@ AAMAS 2016.
 - `gold_per_batch` (int): Number of gold questions to insert randomly into a batch. Defaults to `5`.
 - `exponential_backoff` (bool): If `true`, ask gold questions only in exponentially decreasing batches (1, 2, 4, 8, ...). If `false`, ask gold questions in every batch. Defaults to `true`.
 - `seed` (int): Random seed to use for gold question insertion. Should never change for a worker.
+
+## Data format
+
+A history should be formatted as follows.
+
+Here is an illustrative example, where a worker
+- has answered the two tutorial questions correctly,
+- has answered all 3 screening, but got the last one wrong,
+- and has worked on questions with unknown answers for the first 2 actual work questions, then answered a gold test question correctly, worked on another question with an unknown answer, and finally answered a gold test question incorrectly.
+
+JSON for command line:
+```json
+{
+    'tutorial': [true, true],
+    'screening': [true, true, false],
+    'work': [null, null, true, null, false]
+}
+```
+
+Python:
+``python`
+{
+    'tutorial': [True, True],
+    'screening': [True, True, False],
+    'work': [None, None, True, None, False]
+}
+```
+
+
+
+
+
 
 ## Sample python usage
 
@@ -48,7 +88,8 @@ print(gate.next(history))
 ## Sample command line usage
 
 ```
-> python -m crowdgating.main crowdgating/examples/history1.json
+> source venv/bin/activate
+> python3 -m crowdgating.main crowdgating/examples/history1.json
 ```
 
 ## Sample web application
