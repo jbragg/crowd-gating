@@ -1,5 +1,4 @@
 from . import gating
-from . import guru
 from .constants import DEFAULT_GATING_PARAMS
 
 class Gate:
@@ -42,6 +41,8 @@ class Gate:
             exponential_backoff=self.exponential_backoff,
             seed=seed if seed is None else self.seed,
         )
+        if self.test_policy:
+            raise NotImplementedError
         if (
                 not self.test_policy
                 or gating_recommendation and (
@@ -54,6 +55,7 @@ class Gate:
         ):
             return gating_recommendation
 
+        from . import guru
         return guru.get_action(
             desired_accuracy=self.desired_accuracy,
             work_history=work,

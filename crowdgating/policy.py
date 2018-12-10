@@ -15,7 +15,7 @@ import subprocess
 import numpy as np
 from .pomdp import POMDPPolicy, POMDPModel
 from . import util
-from .util import ensure_dir, equation_safe_filename
+from .util import ensure_dir
 from . import work_learn_problem as wlp
 from . import param
 
@@ -265,43 +265,3 @@ class Policy:
             last_action = None
         return [i for i, a in enumerate(self.model.actions) if
                 a.valid_after(last_action)]
-
-    def __str__(self):
-        if self.policy in ('appl', 'zmdp'):
-            s = self.policy + '-d{:.3f}'.format(self.discount)
-            if self.timeout is not None:
-                s += '-tl{}'.format(self.timeout)
-        elif self.policy == 'aitoolbox':
-            s = 'ait' + '-d{:.3f}'.format(self.discount)
-            s += '-h{}'.format(self.horizon)
-        elif self.policy == 'test_and_boot':
-            s = self.policy
-            if self.n_teach > 0:
-                s += '-n_teach_{}_{}'.format(self.teach_type, self.n_teach)
-            if self.n_blocks != 0:
-                s += '-n_test_{}-n_work_{}-acc_{}_last_{}'.format(
-                    self.n_test, self.n_work,
-                    self.accuracy, self.accuracy_window)
-            if self.n_blocks is not None:
-                s += '-n_blocks_{}-final_{}'.format(
-                    self.n_blocks, self.final_action)
-        elif self.policy == 'work_only':
-            s = self.policy
-        else:
-            raise NotImplementedError
-
-        if self.rl_p():
-            if self.epsilon is not None:
-                s += '-eps_{}'.format(equation_safe_filename(self.epsilon))
-                if self.explore_policy is not None:
-                    s += '-explore_p_{}'.format(self.explore_policy)
-                else:
-                    s += '-explore_{}'.format('_'.join(self.explore_actions))
-            if self.thompson:
-                s += '-thomp'
-            if self.hyperparams and self.hyperparams != 'HyperParams':
-                s += '-{}'.format(self.hyperparams)
-            s += '-cl{}'.format(self.model.n_worker_classes)
-            if self.desired_accuracy is not None:
-                s += '-acc{:.2f}'.format(self.desired_accuracy)
-        return s
